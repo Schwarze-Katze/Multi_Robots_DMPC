@@ -1,8 +1,8 @@
-sync_dmpc_form/devel/
-centerized_form/devel/
+sync_dmpc_form/devel
+centerized_form/devel
 logs/*
-sync_dmpc_form/build/
-centerized_form/build/
+sync_dmpc_form/build
+centerized_form/build
 bin/
 lib/
 build_isolated/
