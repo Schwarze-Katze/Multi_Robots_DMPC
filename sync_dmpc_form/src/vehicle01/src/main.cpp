@@ -305,5 +305,5 @@ void UpdateReference(const mymsg::refpos& msg) {
     xr = msg.xr[0];
     yr = msg.yr[0];
     thetar = msg.thetar[0];
-    std::cout << "ref:" << xr << ',' << yr << ',' << thetar << std::endl;
+    // std::cout << "ref:" << xr << ',' << yr << ',' << thetar << std::endl;
 }

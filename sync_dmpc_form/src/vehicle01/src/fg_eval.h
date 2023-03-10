@@ -38,7 +38,7 @@ namespace {
 
 
 		void operator()(ADvector& fg, const ADvector& x) {
-			// std::cout << "fg&x:" << fg << ',' << x << std::endl;
+			std::cout << "fg&x:" << fg << ',' << x << std::endl;
 			assert(fg.size() == (m_ + p_ - 1) * (3 * N_ + 3) + 6 * N_ + 7 + (m_ - 1) * (N_ + 1) + N_ + 1);
 			assert(x.size() == 5 * (N_ - 1) + 10 + (4 * (N_ - 1) + 8) * (m_ + p_) + (m_ - 1) * (N_ + 1) + N_ + 1);
 			
