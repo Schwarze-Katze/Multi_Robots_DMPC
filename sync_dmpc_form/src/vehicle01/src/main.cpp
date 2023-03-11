@@ -209,7 +209,7 @@ void UpdateVisualize() {
         }
         else {// if fail to solve, publish the shifted pre_states
             update_shift++;
-            // std::cout<<" ***publish previous states : "<< update_shift <<" ***"<<std::endl;		
+            // std::cout<<" ***publish previous states : "<< update_shift <<" ***"<<std::endl;
             if (update_shift < N) {
                 std::vector<double> pre_x;
                 std::vector<double> pre_y;
@@ -302,8 +302,9 @@ void NeighborCallback2(const mymsg::neighborpos& msg) {
 //};
 
 void UpdateReference(const mymsg::refpos& msg) {
-    xr = msg.xr[0];
-    yr = msg.yr[0];
-    thetar = msg.thetar[0];
+    // xr = msg.xr[0];
+    // yr = msg.yr[0];
+    // thetar = msg.thetar[0];
+    xr = -10.0;yr = 1000.0;thetar = 0.0;
     // std::cout << "ref:" << xr << ',' << yr << ',' << thetar << std::endl;
 }

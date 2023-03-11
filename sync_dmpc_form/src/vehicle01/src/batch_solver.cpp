@@ -45,8 +45,8 @@ void BatchSolver::Solve(std::vector<std::vector<double>>& pre_states,std::vector
     Dvector xl(num_states), xu(num_states);
 
 	for (size_t j = 0; j < N_ + 1; j++) {
-		xl[j * 5] = -100.0;xu[j * 5] = 100.0;
-		xl[j*5 + 1] = -100.0;xu[j*5 + 1] = 100.0;//xy limit
+		xl[j * 5] = -100.0;xu[j * 5] = 10000.0;
+		xl[j*5 + 1] = -100.0;xu[j*5 + 1] = 10000.0;//xy limit
 		xl[j*5 + 2] = -4.0*3.14;xu[j*5 + 2] = 4.0*3.14;//theta limit
 		xl[j*5 + 3] = 0.0;xu[j*5 + 3] = 3.0;
 		xl[j*5 + 4] = 0.0;xu[j*5 + 4] = 3.0;//velocity limit
@@ -147,14 +147,14 @@ void BatchSolver::Solve(std::vector<std::vector<double>>& pre_states,std::vector
     );
     auto end   = std::chrono::system_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start_t);
-     std::cout <<  "花费了" 
-     << double(duration.count()) * std::chrono::microseconds::period::num / std::chrono::microseconds::period::den 
-     << "秒" << std::endl;
+    //  std::cout <<  "花费了" 
+    //  << double(duration.count()) * std::chrono::microseconds::period::num / std::chrono::microseconds::period::den 
+    //  << "秒" << std::endl;
     //
     // Check some of the solution values
     //
-    std::cout<<"state : "<<solution.status<<std::endl;
-    std::cout<<"obj : "<<solution.obj_value<<std::endl;
+    // std::cout<<"state : "<<solution.status<<std::endl;
+    // std::cout<<"obj : "<<solution.obj_value<<std::endl;
     //
     //exit(0);
     bool ok = true;
